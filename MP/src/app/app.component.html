@@ -1,1 +1,14 @@
-<app-map></app-map>
+<app-map *ngIf="showAGM === false"></app-map>
+<app-agm-map *ngIf="showAGM === true"></app-agm-map>
+
+<button mat-raised-button
+        color="primary"
+        style="margin-right: 1rem;"
+        (click)="showAGM = true">
+        AGM Map
+</button>
+<button mat-raised-button
+        color="primary"
+        (click)="showAGM = false">
+        JS Google Maps
+</button>
