@@ -1,0 +1,10 @@
+<div style="position: relative">
+<div style="position: absolute; width: max-content; z-index: 0;">
+  <app-js-map></app-js-map>
+</div>
+
+<div style="position: relative; z-index: 99999" *ngIf="displayPinEdit">
+  <app-pin-edit></app-pin-edit>
+</div>
+<button mat-button color="accent" (click)="onClickButton()">Edit Pins</button>
+</div>

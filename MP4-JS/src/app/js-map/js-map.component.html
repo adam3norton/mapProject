@@ -1,0 +1,26 @@
+<body>
+  <h1>{{ title }}</h1>
+
+  <div class="map-full" id="map">
+  </div>
+
+  <div style="margin: 5%;">
+    <mat-form-field appearance="fill">
+      <mat-label>Latitude</mat-label>
+      <input matInput type="number" #pinLat>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Longitude</mat-label>
+      <input matInput type="number" #pinLng>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput type="text" #pinTitle>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="onPinAddedWithForm(pinLat, pinLng, pinTitle)">Add Pin</button>
+    <button mat-button (click)="onClickPin()">Edit Pin</button>
+  </div>
+</body>
